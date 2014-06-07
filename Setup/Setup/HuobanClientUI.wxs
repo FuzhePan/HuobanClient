@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+	<Fragment>
+		<UI Id="HuobanHuobanClientUI">
+      
+      <!--<Property Id="WixUI_Mode" Value="InstallDir" />-->
+      
+      <DialogRef Id="BrowseDlg"/>
+      <DialogRef Id="DiskCostDlg" />
+      <DialogRef Id="ErrorDlg" />
+      <DialogRef Id="FatalError" />
+      <DialogRef Id="FilesInUse" />
+      <DialogRef Id="MsiRMFilesInUse" />
+      <DialogRef Id="PrepareDlg" />
+      <DialogRef Id="ProgressDlg" />
+      <!--<DialogRef Id="ResumeDlg" />-->
+      <DialogRef Id="UserExit" />
+      
+      <UIRef Id="WixUI_InstallDir" />
+    </UI>
+		
+	</Fragment>
+</Wix>

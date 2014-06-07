@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"
+     xmlns:bal="http://schemas.microsoft.com/wix/BalExtension"
+          xmlns:util="http://schemas.microsoft.com/wix/UtilExtension">
+	<Bundle Name="民间版伙伴客户端" 
+          Version="1.0.0.0" 
+          Manufacturer="FuzhePan@hotmail.com" 
+          UpgradeCode="8dbc0abf-d556-49c2-a60d-fdaa02ab441a"
+          IconSourceFile="..\..\Resources\HuobanIcon.ico" >
+    <BootstrapperApplicationRef Id="WixStandardBootstrapperApplication.RtfLicense" >
+      <bal:WixStandardBootstrapperApplication LicenseFile="..\..\Resources\HuobanClientLicense.rtf"
+                                              LogoFile="..\..\Resources\ColleagueToFrends.bmp"
+                                              ThemeFile="BsTheme.xml"
+                                              LocalizationFile="BsLocalize.wxl"/>
+    </BootstrapperApplicationRef>
+
+    <Chain>
+      <PackageGroupRef Id="NetFx45Exe"/>
+      <!--安装Huoban-->
+      <MsiPackage Id='HuobanMSI' SourceFile="..\Setup\bin\Release\zh-cn\Setup.msi" DisplayInternalUI="yes"/>
+    </Chain>
+	</Bundle>
+
+  <!--安装.NetFramework4.5-->
+  <Fragment>
+    <?define NetFx45MinRelease = 378389?>
+    <util:RegistrySearchRef Id="NETFRAMEWORK45"/>
+    <PackageGroup Id="NetFx45Exe">
+      <ExePackage
+          InstallCommand="/norestart /passive /showrmui /ChainingPackage Huoban"
+          RepairCommand="/norestart /passive /showrmui /ChainingPackage Huoban"
+          UninstallCommand="/norestart /passive /showrmui /ChainingPackage Huoban"
+          PerMachine="yes"
+          DetectCondition="NETFRAMEWORK45 &gt;= $(var.NetFx45MinRelease)"
+          Id="NetFx45Exe"
+          Vital="yes"
+          Permanent="yes"
+          SourceFile="..\..\Resources\.NetFramework4.5\dotnetfx45_full_x86_x64.exe"
+          LogPathVariable="NetFx45FullLog"
+          Compressed="yes">
+      </ExePackage>
+    </PackageGroup>
+  </Fragment>
+</Wix>

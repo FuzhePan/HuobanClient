@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  <copyright file="en-us.wxl" company="Outercurve Foundation">
+    Copyright (c) 2004, Outercurve Foundation.
+    This software is released under Microsoft Reciprocal License (MS-RL).
+    The license and further copyright text can be found in the file
+    LICENSE.TXT at the root directory of the distribution.
+  </copyright>
+-->
+<!--汉化 by panfz  2014.2.10-->
+<WixLocalization Culture="zh-cn" xmlns="http://schemas.microsoft.com/wix/2006/localization">
+    <String Id="msierrUSRFailedUserCreate" Overridable="yes"><![CDATA[创建用户失败。  ([2]   [3]   [4]   [5])]]></String>
+    <String Id="msierrUSRFailedUserCreatePswd" Overridable="yes">因为密码无效，所以创建用户失败。  ([2]   [3]   [4]   [5])</String>
+    <String Id="msierrUSRFailedUserGroupAdd" Overridable="yes">把用户加入到用户组中时失败。  ([2]   [3]   [4]   [5])</String>
+    <String Id="msierrUSRFailedUserCreateExists" Overridable="yes">要创建的用户已经存在，所以创建失败。  ([2]   [3]   [4]   [5])</String>
+
+    <String Id="msierrSMBFailedCreate" Overridable="yes">创建共享网络时失败。  ([2]   [3]   [4]   [5])</String>
+    <String Id="msierrSMBFailedDrop" Overridable="yes">关闭网络共享时失败。  ([2]   [3]   [4]   [5])</String>
+
+    <String Id="msierrPERFMONFailedRegisterDLL" Overridable="yes">注册DLL时失败。  ([2]   [3]   [4]   [5])</String>
+    <String Id="msierrPERFMONFailedUnregisterDLL" Overridable="yes">注销DLL时失败。  ([2]   [3]   [4]   [5])</String>
+
+    <String Id="msierrInstallPerfCounterData" Overridable="yes">安装性能计数器时失败。  ([2]   [3]   [4]   [5])</String>
+    <String Id="msierrUninstallPerfCounterData" Overridable="yes">卸载性能计数器时失败。  ([2]   [3]   [4]   [5])</String>
+
+    <String Id="msierrSecureObjectsFailedCreateSD" Overridable="yes">为[3]\[4]创建安全描述符时失败，系统错误：[2] </String>
+    <String Id="msierrSecureObjectsFailedSet" Overridable="yes">为对象[3]设置安全描述符时失败，系统错误：[2] </String>
+    <String Id="msierrSecureObjectsUnknownType" Overridable="yes">位置对象类型[3]，系统错误：[2]</String>
+
+    <String Id="msierrXmlFileFailedRead" Overridable="yes">修改XML文件时，遇到一个错误。</String>
+    <String Id="msierrXmlFileFailedOpen" Overridable="yes">打开XML文件[3]时失败，系统错误：[2] </String>
+    <String Id="msierrXmlFileFailedSelect" Overridable="yes">在XML文件[4]中找不到节点：[3]，系统错误：[2] </String>
+    <String Id="msierrXmlFileFailedSave" Overridable="yes">保存XML文件[3]失败，系统错误：[2]</String>
+
+    <String Id="msierrXmlConfigFailedRead" Overridable="yes">修改XML文件时，遇到一个错误。</String>
+    <String Id="msierrXmlConfigFailedOpen" Overridable="yes">打开XML文件[3]时失败，系统错误：[2] </String>
+    <String Id="msierrXmlConfigFailedSelect" Overridable="yes">在XML文件[4]中找不到节点：[3]，系统错误：[2]</String>
+    <String Id="msierrXmlConfigFailedSave" Overridable="yes">保存XML文件[3]失败，系统错误：[2]</String>
+</WixLocalization>
